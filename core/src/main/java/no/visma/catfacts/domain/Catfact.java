@@ -16,7 +16,7 @@ import static no.visma.catfacts.domain.Catfact.TABLE_NAME;
 @Table(name = TABLE_NAME)
 public class Catfact {
     static final String TABLE_NAME = "T_CATFACTS";
-    static final String SEQUENCE_NAME = TABLE_NAME + "SEQ";
+    static final String SEQUENCE_NAME = TABLE_NAME + "_SEQ";
 
     @Id
     @SequenceGenerator(name = SEQUENCE_NAME, sequenceName = SEQUENCE_NAME, initialValue = 10, allocationSize = 50)
