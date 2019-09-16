@@ -1,6 +1,6 @@
 package no.visma.catfacts.consumer;
 
-import lombok.Value;
+import lombok.*;
 
 @Value
 public class CatFactResponse {
