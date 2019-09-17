@@ -3,7 +3,6 @@ package no.visma.catfacts.consumer;
 import no.visma.catfacts.exceptions.CatfactsFunctionException;
 import no.visma.catfacts.exceptions.CatfactsTechnicalException;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.HttpServerErrorException;
@@ -20,8 +19,8 @@ public class CatFactConsumer {
     private final String url;
 
     @Inject
-    public CatFactConsumer(RestTemplateBuilder restTemplateBuilder, @Value("${catfact.ninja.url}") String url) {
-        this.restTemplate = restTemplateBuilder.build();
+    public CatFactConsumer(RestTemplate restTemplate, @Value("${catfact.ninja.url}") String url) {
+        this.restTemplate = restTemplate;
         this.url = url;
     }
 
