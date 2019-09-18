@@ -1,6 +1,6 @@
 package no.visma.catfacts.mapper;
 
-import no.visma.catfacts.domain.Catfact;
+import no.visma.catfacts.domain.CatFact;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
@@ -9,18 +9,18 @@ import java.util.List;
 
 @Component
 public class StringToCatFactMapper {
-    public List<Catfact> toCatFact(List<String> facts) {
+    public List<CatFact> toCatFact(List<String> facts) {
         if (facts == null) {
             throw new RuntimeException();
         }
-        List<Catfact> catfacts = new ArrayList<>();
+        List<CatFact> catFacts = new ArrayList<>();
         for (String fact : facts) {
-            catfacts.add(Catfact.builder()
+            catFacts.add(CatFact.builder()
                     .fact(fact)
                     .createdDate(LocalDateTime.now())
                     .length(fact.length())
                     .build());
         }
-        return catfacts;
+        return catFacts;
     }
 }

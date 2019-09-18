@@ -13,7 +13,7 @@
             <appender-ref ref="CONSOLE"/>
         </root>
 
-        <logger name="no.visma.catfacts" level="INFO" additivity="false">
+        <logger name="no.visma.catFacts" level="INFO" additivity="false">
             <appender-ref ref="CONSOLE"/>
         </logger>
 

@@ -6,15 +6,14 @@ import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.List;
 
-import static no.visma.catfacts.domain.Catfact.TABLE_NAME;
+import static no.visma.catfacts.domain.CatFact.TABLE_NAME;
 
 @Data
 @Entity
 @Builder
 @Table(name = TABLE_NAME)
-public class Catfact {
+public class CatFact {
     static final String TABLE_NAME = "T_CATFACTS";
     static final String SEQUENCE_NAME = TABLE_NAME + "_SEQ";
 

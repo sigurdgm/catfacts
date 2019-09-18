@@ -1,6 +1,6 @@
 package no.visma.catfacts.mapper;
 
-import no.visma.catfacts.domain.Catfact;
+import no.visma.catfacts.domain.CatFact;
 import org.junit.Test;
 
 import java.util.List;
@@ -22,11 +22,11 @@ public class StringToCatFactMapperTest {
         final String fact = "TESTFACT";
         List<String> facts = List.of(fact);
 
-        List<Catfact> catfacts = stringToCatFactMapper.toCatFact(facts);
+        List<CatFact> catFacts = stringToCatFactMapper.toCatFact(facts);
 
-        assertThat(catfacts.size(), is(1));
-        assertThat(catfacts.get(0).getFact(), is(fact));
-        assertThat(catfacts.get(0).getCreatedDate(), is(both(greaterThan(now().minusSeconds(1))).and(lessThan(now().plusSeconds(1)))));
+        assertThat(catFacts.size(), is(1));
+        assertThat(catFacts.get(0).getFact(), is(fact));
+        assertThat(catFacts.get(0).getCreatedDate(), is(both(greaterThan(now().minusSeconds(1))).and(lessThan(now().plusSeconds(1)))));
     }
 
     @Test(expected = RuntimeException.class)

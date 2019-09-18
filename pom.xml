@@ -13,10 +13,10 @@
         <version>2.1.7.RELEASE</version>
         <relativePath/>
     </parent>
-    <groupId>no.visma.catfacts</groupId>
-    <artifactId>catfacts</artifactId>
+    <groupId>no.visma.catFacts</groupId>
+    <artifactId>catFacts</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>catfacts</name>
+    <name>catFacts</name>
     <description>Demo project for NK19</description>
 
     <properties>
